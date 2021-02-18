@@ -26,11 +26,11 @@
       
       <div class="right__container">
         <p class="right__content">Website — Under Maintenance</p>
-        <form class="userInput" method="POST" action="mailto:hello@ekgroup.in?subject=Get notified from Website" enctype="text/plain"target="_blank">
+        <form class="userInput" method="POST" action="form.php">
           <label for="userEmail">NOTIFY ME</label><br />
           <input
             type="email"
-            name="userEmail"
+            name="email"
             class="userEmail"
             placeholder="Your email"
             required
