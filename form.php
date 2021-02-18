@@ -1,14 +1,11 @@
-<?php
-$visitor_email = $_POST['email'];
-$email_from = 'hello@ekgroup.in';
+if (isset($_POST['submit'])){
+    $email_from = $_POST['email'];
+    $subject = "Get notified from Website";
 
-$email_subject = "Get notified from Website";
-$email_body = "User Email: $visitor_email.\n";
+    $mailTo = "chaitanya2561@gmail.com";
+    $headers = "From: ".$email_from;
+    $txt = "You have received an e-mail from ".$email_from.".\n\n";
 
-$to = "chaitanya2561@gmail.com";
-
-$headers = "From: $email_from \r\n";
-$headers = "Reply-To: $visitor_email \r\n";
-mail($t0,$email_subject,$email_body,$headers);
-header("Location: inbex.html");
-?>
+    mail($mailTo, $txt, $headers, $subject);
+    header("Location: index.php?mailsend");
+}
